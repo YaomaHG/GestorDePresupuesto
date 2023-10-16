@@ -1,0 +1,83 @@
+<!-- FILEPATH: /c:/Users/Colibecas/Downloads/Gestor de presupuesto/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Presupuesto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestor de Presupuesto</h1>
+    </header>
+    <main>
+        <section id="categories">
+            <h2>Categorías</h2>
+            <ul id="category-list"></ul>
+            <form id="add-category-form">
+                <label for="category-name">Nombre de la categoría:</label>
+                <input type="text" id="category-name" required>
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+        <section id="transactions">
+            <h2>Transacciones</h2>
+            <form id="add-transaction-form">
+                <label for="transaction-type">Tipo de transacción:</label>
+                <select id="transaction-type" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="income">Ingreso</option>
+                    <option value="expense">Gasto</option>
+                </select>
+                <label for="transaction-description">Descripción:</label>
+                <input type="text" id="transaction-description" required>
+                <label for="transaction-amount">Cantidad:</label>
+                <input type="number" id="transaction-amount" required>
+                <label for="transaction-date">Fecha:</label>
+                <input type="date" id="transaction-date" required>
+                <label for="transaction-category">Categoría:</label>
+                <select id="transaction-category" required></select>
+                <button type="submit">Agregar</button>
+            </form>
+            <table id="transaction-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Categoría</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+        <section id="summary">
+            <h2>Resumen</h2>
+            <form id="summary-form">
+                <label for="summary-start-date">Fecha de inicio:</label>
+                <input type="date" id="summary-start-date" required>
+                <label for="summary-end-date">Fecha de fin:</label>
+                <input type="date" id="summary-end-date" required>
+                <button type="submit">Mostrar</button>
+            </form>
+            <table id="summary-table">
+                <thead>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Ingresos</th>
+                        <th>Gastos</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Gestor de Presupuesto &copy; 2021</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
